@@ -1,4 +1,4 @@
-git 1. select plaintext from wordform LIMIT 10;
+1. select plaintext from wordform LIMIT 10;
 2. select plaintext from wordform where plaintext ilike 'a%';
 3. select title from work where genretype = 'p';
 4. select avg(totalparagraphs) from work where genretype = 't';
