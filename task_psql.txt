@@ -1,0 +1,18 @@
+git 1. select plaintext from wordform LIMIT 10;
+2. select plaintext from wordform where plaintext ilike 'a%';
+3. select title from work where genretype = 'p';
+4. select avg(totalparagraphs) from work where genretype = 't';
+5. select title from work where totalwords > (select AVG(totalwords) from work);
+6. select character.charname, speechcount,work.title from character left join character_work on character.charid = character_work.charid LEFT JOIN work on character_work.workid = work.workid;
+7. select round(avg(character.speechcount)) from character left join character_work on character.charid = character_work.charid left join work on character_work.workid = work.workid where title = 'Romeo and Juliet';
+8. select sum(wordcount) as sum from paragrath group by section;
+(select section,sum(wordcount) as sum from paragraph group by section;)
+9. select charname, speechcount from character where speechcount between 15 and 30;
+10. select title from work where year between 1601 and 1699;
+(select title, year from work where year between 1601 and 1699;)
+11. select longtitle from work where longtitle like '%the%';
+12. select distinct section from paragraph;
+13. select chapterid, description, work.title from chapter join work on chapter.workid = work.workid;
+14. select paragraph.paragraphnum, charname, speechcount from character right join paragraph on character.charid = paragraph.charid;
+15. select paragraph.paragraphnum, title, year from work right join paragraph on work.workid = paragraph.workid;
+
